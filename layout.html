@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+@media only screen and(max-width:500px){
+}
+
+#logo{
+  display: inline-block;
+  width: 100px;
+  position:absolute;
+  top: 20px;
+  left: 10px;
+}
+
+#nav1{
+ position: absolute;
+ top: 20px;
+ right: 20px;
+ display: inline-block;
+ padding:0;
+ list-style:none;
+ text-align:left;
+}
+
+#h11{
+  float: left;
+  margin-left:110px;
+  margin-top: -60px;
+  text-align:left;
+  font-size: 30px;
+}
+
+.header{
+  background-image: url("ISM_.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  height:780px;
+  padding-top:80px;
+  text-align:center;
+  margin:auto;
+  font-size:22px;
+  color:white;
+  font-family:"times new roman";
+  display:inline-block;
+}
+
+.heading1{
+  margin-top:250px;
+  font-family: 'Open Sans';
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: #ffffff;
+}
+.heading2{
+  margin-top:-30px;
+}
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0f3057;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  color: black;
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/* Cards */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+/* Style tab links */
+.tablink {
+  background-color: #0f3057;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 16px;
+  width: 16.62%;
+  object-fit:cover;
+}
+
+.tablink:hover {
+  background-color: White;
+  color: Black;
+}
+
+.tablink:focus {
+  background-color: White;
+  color: Black;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: Black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+footer {
+    background-color: #0f3057;
+    font-family: "Lato", sans-serif;
+    padding: 70px 0 150px 0;
+}
+
+.footer-inner {
+    width: 90%;
+    margin-left: 40px;
+    margin-right: auto;
+    margin-bottom: 150px;
+    max-width: 1170px;
+    position: relative;
+}
+
+.footer-item {
+    float: left;
+    margin: 0 7.2% 0 0;
+}
+
+.footer-item:nth-of-type(4) {
+    display: none;
+}
+
+.footer-item:nth-of-type(7) {
+    float: right;
+    margin-right: 0;
+}
+
+.fh1 {
+    font-weight: 900;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.fh2 {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 13px;
+    color: #d1d1d1;
+    letter-spacing: 0.03em;
+    padding: 15px 0 0 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+a:hover {
+    color: white;
+}
+
+.desktop {
+    display: auto;
+}
+
+.footer-inner:after {
+    content: "© 2020 IIT ISM. All Rights Reserved.";
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    color: #d1d1d1;
+    position: absolute;
+    top: 220px;
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+
+footer {
+    padding: 50px 0 70px 0 !important;
+}
+
+.footer-inner {
+    border-bottom: 1px solid #333;
+    padding-bottom: 490px;
+    margin-bottom: 50px;
+}
+
+.footer-item {
+    margin: 0 0 42px 0;
+    width: 50%;
+}
+
+.footer-item:nth-of-type(1) {
+    border-bottom: 1px solid #333;
+    padding-bottom: 32px;
+    float: none;
+    width: 100%;
+}
+
+.footer-item:nth-of-type(2) {
+    clear: both;
+}
+
+.footer-item:nth-of-type(4) {
+    clear: both;
+    display: block;
+}
+
+.footer-item:nth-of-type(6) {
+    clear: both;
+}
+
+.footer-item:nth-of-type(7) {
+    clear: both;
+    float: left;
+    margin: 20px 0 0 -13px;
+}
+
+.desktop {
+    display: none;
+}
+
+.footer-inner:after {
+    top: 730px;
+}
+}
+</style>
+</head>
+<body>
+<header class="header">
+<img id="logo" src="Logo.jpg" alt="LogoISM">
+<h1 id="h11">भारतीय प्रौद्योगिकी संस्थान (भारतीय खनि विद्यापीठ), धनबाद<br>Indian Institute of Technology(ISM) Dhanbad</h1>
+<!--Navigation Bar-->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <div class="row">
+    <div class="column">
+    <div class="card">
+      <p>
+        Home
+      </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <p>
+        Office Order
+      </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <p>
+        Quick Links
+      </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <p>
+        Contact Us
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<span id="nav1" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<h1 class="heading1 ">HEALTH CENTER</h1>
+<h1 class="heading2 ">सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः ।सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत् ॥</h1>
+
+</header>
+
+
+<!--Tabs-->
+<button class="tablink" onclick="openPage('Home', this)" id="defaultOpen" autofocus>Healthy Living</button>
+<button class="tablink" onclick="openPage('Doctors', this)" >Doctors</button>
+<button class="tablink" onclick="openPage('News', this)">News</button>
+<button class="tablink" onclick="openPage('Facilities', this)">Facilities</button>
+<button class="tablink" onclick="openPage('Schedule', this)">Hospital Schedule</button>
+<button class="tablink" onclick="openPage('CRI', this)">COVID Related Information</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="Doctors" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Facilities" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Schedule" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="CRI" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<footer>
+  <nav class="footer-inner">
+    <section class="footer-item">
+      <h1 class="fh1">CONTACT US</h1>
+      <h2 class="fh2">OFFICE OF DEAN ACADEMICS IIT (ISM),<br>DHANBAD JHARKHAND, INDIA, 826004<br></h2>
+      <h2 class="fh2">PHONE -91-326-223-5213<br />EMAIL -OFFICEOFDOAC@IITISM.AC.IN</h2>
+    </section>
+    <section class="footer-item">
+      <h1 class="fh1">Visit</h1>
+        <h2 class="fh2">Main Campus IIT (ISM), Dhanbad<br />Jharkhand, INDIA, 826004</h2>
+      </section>
+  </nav>
+</footer>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+
+</script>
+
+</body>
+</html>
